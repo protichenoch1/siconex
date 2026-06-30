@@ -12,20 +12,22 @@ body {
   color: #111;
 }
 
-/* HEADER */
-header {
+/* NAVBAR */
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 15px 20px;
 }
 
-header h1 {
+.navbar h2 {
   font-size: 22px;
 }
 
-header i {
-  font-size: 20px;
+.cart {
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
 }
 
 /* HERO */
@@ -38,19 +40,22 @@ header i {
 }
 
 .hero h1 {
-  font-size: 32px;
+  font-size: 30px;
   font-weight: bold;
   line-height: 1.2;
+}
+
+.hero span {
+  opacity: 0.9;
 }
 
 .hero p {
   margin-top: 10px;
   font-size: 14px;
-  opacity: 0.9;
 }
 
 .hero button {
-  margin-top: 20px;
+  margin-top: 15px;
   background: white;
   color: #16a34a;
   border: none;
@@ -60,17 +65,20 @@ header i {
   cursor: pointer;
 }
 
-/* SECTION TITLE */
-h2 {
-  margin: 20px;
+/* PRODUCTS SECTION */
+.products {
+  padding: 0 20px;
 }
 
-/* PRODUCTS GRID */
-.products {
+.products h2 {
+  margin-bottom: 15px;
+}
+
+/* GRID */
+.product-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 15px;
-  padding: 0 20px 20px;
 }
 
 /* CARD */
@@ -94,7 +102,7 @@ h2 {
   object-fit: contain;
 }
 
-/* PRODUCT NAME */
+/* TITLE */
 .card h3 {
   font-size: 15px;
   margin: 10px 0;
