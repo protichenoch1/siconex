@@ -27,9 +27,28 @@ body {
 
 /* HERO */
 .hero {
-  text-align: center;
   padding: 40px 20px;
-  background: white;
+  background: linear-gradient(to right, #e8f5e9, #ffffff);
+  border-radius: 10px;
+  margin: 20px;
+}
+
+.hero h1 {
+  font-size: 32px;
+}
+
+.hero span {
+  color: var(--green);
+}
+
+.hero button {
+  background: var(--green);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  margin-top: 15px;
+  border-radius: 6px;
+  cursor: pointer;
 }
 
 /* PRODUCTS */
