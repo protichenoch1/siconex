@@ -59,3 +59,9 @@ body {
 button {
   border-radius: 5px;
 }
+
+:root {
+  --green: #16a34a;
+  --dark-green: #15803d;
+  --light-bg: #f9fafb;
+}
