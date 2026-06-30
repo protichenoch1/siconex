@@ -1,5 +1,10 @@
 const container = document.getElementById("product-list");
+const cartCount = document.getElementById("cart-count");
 
+// Load cart from storage
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+// Display products
 products.forEach(product => {
   container.innerHTML += `
     <div class="card">
@@ -11,6 +16,32 @@ products.forEach(product => {
   `;
 });
 
+// Add to cart
 function addToCart(id) {
-  alert("Added to cart");
+  const product = products.find(p => p.id === id);
+
+  const existing = cart.find(item => item.id === id);
+
+  if (existing) {
+    existing.quantity += 1;
+  } else {
+    cart.push({ ...product, quantity: 1 });
+  }
+
+  localStorage.setItem("cart", JSON.stringify(cart));
+  updateCartCount();
 }
+
+// Update cart count
+function updateCartCount() {
+  let total = 0;
+
+  cart.forEach(item => {
+    total += item.quantity;
+  });
+
+  cartCount.innerText = total;
+}
+
+// Initialize count on load
+updateCartCount();
