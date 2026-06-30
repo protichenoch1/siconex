@@ -55,3 +55,7 @@ body {
   margin-top: 10px;
   cursor: pointer;
 }
+
+button {
+  border-radius: 5px;
+}
