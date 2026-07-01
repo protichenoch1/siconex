@@ -277,3 +277,34 @@ body {
 
   .links a {
     font-size: 13px
+
+  /* TOP ROW (logo + account + cart) */
+.nav-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+/* ICONS ALIGNMENT */
+.nav-icons {
+  display: flex;
+  gap: 15px;
+  font-size: 14px;
+}
+
+/* MOBILE FIX */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav-top {
+    width: 100%;
+  }
+
+  .search-box {
+    width: 100%;
+  }
+}
