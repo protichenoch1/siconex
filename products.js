@@ -1,26 +1,18 @@
-const products = [
-  {
-    id: 1,
-    name: "Smartphone",
-    price: 200,
-    image: "https://via.placeholder.com/200"
-  },
-  {
-    id: 2,
-    name: "Laptop",
-    price: 650,
-    image: "https://via.placeholder.com/200"
-  },
-  {
-    id: 3,
-    name: "Headphones",
-    price: 50,
-    image: "https://via.placeholder.com/200"
-  },
-  {
-    id: 4,
-    name: "Smartwatch",
-    price: 120,
-    image: "https://via.placeholder.com/200"
-  }
-];
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Product</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="product-page">
+  <img id="product-img">
+  <h2 id="product-name"></h2>
+  <p id="product-price"></p>
+  <button onclick="addToCart()">Add to Cart</button>
+</div>
+
+<script src="product.js"></script>
+</body>
+</html>
