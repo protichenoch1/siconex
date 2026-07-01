@@ -1,33 +1,37 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Siconex</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+<!-- TOP BAR -->
+<div class="topbar">
+  🚚 Free delivery on orders over $50
+</div>
 
-  <!-- NAVBAR -->
-  <nav class="navbar">
-    <h2>Siconex</h2>
-    <a href="cart.html" class="cart">🛒 <span id="cart-count">0</span></a>
-  </nav>
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="logo">🛍️ <span>Siconex</span></div>
 
-  <!-- HERO -->
-  <section class="hero">
-    <h1>Shop <span>Smart</span>. Shop <span>Easy</span>.</h1>
-<button>Shop Now</button>
-    <p>Best deals on phones, laptops & more</p>
-  </section>
+  <div class="search-box">
+    <input type="text" placeholder="Search for products..." />
+    <select>
+      <option>All Categories</option>
+    </select>
+    <button>🔍</button>
+  </div>
 
-  <!-- PRODUCTS -->
-  <section class="products">
-    <h2>Products</h2>
-    <div id="product-list" class="product-grid"></div>
-  </section>
+  <div class="nav-icons">
+    <span>👤 Account</span>
+    <span>🛒 Cart <b>0</b></span>
+  </div>
+</nav>
 
-  <script src="products.js"></script>
-  <script src="app.js"></script>
-</body>
-</html>
+<!-- MENU -->
+<div class="menu">
+  <button class="categories">☰ All Categories</button>
+  <div class="links">
+    <a href="#">Home</a>
+    <a href="#">Phones</a>
+    <a href="#">Laptops</a>
+    <a href="#">Accessories</a>
+    <a href="#">Smartwatches</a>
+    <a href="#">Deals</a>
+    <a href="#">About Us</a>
+    <a href="#">Contact</a>
+  </div>
+</div>
