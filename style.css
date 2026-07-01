@@ -7,7 +7,15 @@
   box-sizing: border-box;
 }
 
-/* HEADER FIXED */
+/* BODY */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f5f5f5;
+  padding-top: 130px;
+  overflow-x: hidden;
+}
+
+/* HEADER */
 .header {
   position: fixed;
   top: 0;
@@ -17,7 +25,6 @@
   border-bottom: 1px solid #eee;
 }
 
-/* TOP ROW */
 .nav-row {
   display: flex;
   justify-content: space-between;
@@ -25,7 +32,6 @@
   padding: 10px 15px;
 }
 
-/* LEFT SIDE */
 .left {
   display: flex;
   align-items: center;
@@ -34,24 +40,20 @@
 
 .menu {
   font-size: 22px;
-  cursor: pointer;
 }
 
 .logo {
   font-size: 20px;
-  font-weight: bold;
+  font-weight: 600;
 }
 
-/* RIGHT SIDE */
 .right {
   display: flex;
-  align-items: center;
   gap: 15px;
 }
 
 .icon {
   font-size: 20px;
-  cursor: pointer;
 }
 
 /* SEARCH */
@@ -64,13 +66,11 @@
   padding: 10px;
   border-radius: 8px;
   border: 1px solid #ccc;
-  font-size: 14px;
 }
 
-/* PUSH CONTENT DOWN */
-body {
-  font-family: 'Poppins', sans-serif;
-  padding-top: 90px;
+/* MAIN */
+.main {
+  padding: 10px;
 }
 
 /* SLIDER */
@@ -78,27 +78,90 @@ body {
   width: 100%;
   aspect-ratio: 16 / 7;
   overflow: hidden;
-  background: #fff;
+  border-radius: 10px;
 }
 
-/* SLIDES TRACK */
 .slides {
   display: flex;
   animation: slide 12s infinite;
 }
 
-/* IMAGES */
 .slides img {
   width: 100%;
   height: 100%;
-  object-fit: cover;        /* 👈 no empty space */
-  object-position: center;
-  flex-shrink: 0;           /* 👈 prevents shifting */
+  object-fit: cover;
+  flex-shrink: 0;
 }
 
-/* ANIMATION (SMOOTH + CORRECT) */
+/* ANIMATION */
 @keyframes slide {
   0%, 30%   { transform: translateX(0); }
   35%, 65%  { transform: translateX(-100%); }
   70%, 100% { transform: translateX(-200%); }
+}
+
+/* CATEGORIES */
+.categories {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.cat {
+  background: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.cat img {
+  width: 40px;
+  height: 40px;
+}
+
+.cat p {
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+/* PROMO */
+.promo {
+  margin-top: 15px;
+}
+
+.promo img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* PRODUCTS */
+.products {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.product {
+  background: #fff;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.product img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.name {
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.price {
+  color: orange;
+  font-weight: 600;
 }
