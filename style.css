@@ -87,8 +87,9 @@ body {
 
 .slides img {
   width: 100%;
-  height: 180px;   /* ideal for mobile */
-  object-fit: cover;
+  height: 180px;
+  object-fit: contain;
+  background: #fff; /* fills empty space */
 }
 
 /* ANIMATION */
