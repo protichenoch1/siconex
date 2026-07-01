@@ -43,9 +43,11 @@ body {
 }
 
 .logo {
-  font-size: 22px;
-  font-weight: 700;
-  color: #065f46; /* deep green */
+  font-size: 24px;
+  font-weight: 800;
+  background: linear-gradient(90deg, #16a34a, #22c55e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .right {
