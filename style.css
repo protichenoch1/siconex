@@ -8,86 +8,183 @@
 /* BODY */
 body {
   font-family: Arial, sans-serif;
-  background: #f9fafb;
+  background: #f8fafc;
   color: #111;
+}
+
+/* TOP BAR */
+.topbar {
+  background: #16a34a;
+  color: white;
+  text-align: center;
+  padding: 8px;
+  font-size: 14px;
 }
 
 /* NAVBAR */
 .navbar {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   padding: 15px 20px;
+  background: white;
 }
 
-.navbar h2 {
+.logo {
   font-size: 22px;
+  font-weight: bold;
+  color: #16a34a;
 }
 
-.cart {
+/* SEARCH */
+.search-box {
+  display: flex;
+  width: 50%;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  background: white;
+}
+
+.search-box input {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  outline: none;
+}
+
+.search-box select {
+  border: none;
+  padding: 12px;
+  background: #f1f5f9;
+}
+
+.search-box button {
+  background: #16a34a;
+  color: white;
+  border: none;
+  padding: 0 18px;
+  cursor: pointer;
+}
+
+/* NAV ICONS */
+.nav-icons span {
+  margin-left: 20px;
+  font-size: 14px;
+}
+
+/* MENU */
+.menu {
+  display: flex;
+  align-items: center;
+  padding: 12px 20px;
+  gap: 20px;
+  background: white;
+}
+
+.categories {
+  background: #16a34a;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.links a {
+  margin-right: 15px;
   text-decoration: none;
-  font-size: 18px;
-  color: black;
+  color: #333;
+  font-size: 14px;
 }
 
 /* HERO */
 .hero {
-  background: linear-gradient(135deg, #16a34a, #22c55e);
-  color: white;
-  padding: 40px 20px;
-  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(135deg, #e8f5e9, #d1fae5);
   margin: 20px;
+  border-radius: 20px;
+  padding: 40px;
 }
 
-.hero h1 {
-  font-size: 30px;
-  font-weight: bold;
-  line-height: 1.2;
+/* HERO TEXT */
+.hero-text {
+  max-width: 50%;
 }
 
-.hero span {
-  opacity: 0.9;
-}
-
-.hero p {
-  margin-top: 10px;
-  font-size: 14px;
-}
-
-.hero button {
-  margin-top: 15px;
-  background: white;
+.hero-text span {
+  background: #dcfce7;
   color: #16a34a;
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-size: 13px;
+}
+
+.hero-text h1 {
+  font-size: 36px;
+  margin: 15px 0;
+}
+
+.hero-text h1 b {
+  color: #16a34a;
+}
+
+.hero-text p {
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.hero-text button {
+  background: #16a34a;
+  color: white;
   border: none;
   padding: 12px 20px;
   border-radius: 10px;
-  font-weight: bold;
   cursor: pointer;
+}
+
+/* HERO IMAGE */
+.hero img {
+  width: 300px;
 }
 
 /* PRODUCTS SECTION */
 .products {
-  padding: 0 20px;
+  padding: 20px;
 }
 
-.products h2 {
-  margin-bottom: 15px;
+.products-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.products-header h2 {
+  font-size: 20px;
+}
+
+.products-header a {
+  color: #16a34a;
+  text-decoration: none;
+  font-size: 14px;
 }
 
 /* GRID */
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 15px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-top: 20px;
 }
 
 /* CARD */
 .card {
   background: white;
+  border-radius: 12px;
   padding: 15px;
-  border-radius: 14px;
-  text-align: center;
-  border: 1px solid #f1f1f1;
+  border: 1px solid #eee;
   transition: 0.3s;
 }
 
@@ -95,10 +192,21 @@ body {
   transform: translateY(-5px);
 }
 
+/* BADGE */
+.badge {
+  background: #16a34a;
+  color: white;
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 6px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
 /* IMAGE */
 .card img {
   width: 100%;
-  height: 120px;
+  height: 150px;
   object-fit: contain;
 }
 
@@ -109,21 +217,28 @@ body {
 }
 
 /* PRICE */
-.card p {
+.price {
   color: #16a34a;
   font-weight: bold;
+  margin: 5px 0;
+}
+
+/* RATING */
+.rating {
+  font-size: 13px;
+  color: #16a34a;
 }
 
 /* BUTTON */
 .card button {
+  margin-top: 10px;
+  width: 100%;
   background: #16a34a;
   color: white;
   border: none;
   padding: 10px;
-  margin-top: 10px;
   border-radius: 8px;
   cursor: pointer;
-  width: 100%;
 }
 
 .card button:hover {
