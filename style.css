@@ -244,3 +244,36 @@ body {
 .card button:hover {
   background: #15803d;
 }
+
+/* MOBILE FIX */
+@media (max-width: 768px) {
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .search-box {
+    width: 100%;
+  }
+
+  .nav-icons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .menu {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .links a {
+    font-size: 13px
