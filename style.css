@@ -77,33 +77,28 @@ body {
 .slider {
   width: 100%;
   aspect-ratio: 16 / 7;
+  overflow: hidden;
   background: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
+/* SLIDES TRACK */
 .slides {
   display: flex;
-  width: 300%;
   animation: slide 12s infinite;
 }
 
+/* IMAGES */
 .slides img {
   width: 100%;
-  height: 180px;
-  object-fit: contain;
+  height: 100%;
+  object-fit: cover;        /* 👈 no empty space */
   object-position: center;
+  flex-shrink: 0;           /* 👈 prevents shifting */
 }
 
-/* ANIMATION */
+/* ANIMATION (SMOOTH + CORRECT) */
 @keyframes slide {
-  0%   { transform: translateX(0); }
-  33%  { transform: translateX(0); }
-
-  38%  { transform: translateX(-100%); }
-  66%  { transform: translateX(-100%); }
-
-  71%  { transform: translateX(-200%); }
-  100% { transform: translateX(-200%); }
+  0%, 30%   { transform: translateX(0); }
+  35%, 65%  { transform: translateX(-100%); }
+  70%, 100% { transform: translateX(-200%); }
 }
