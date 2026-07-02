@@ -75,10 +75,11 @@ const products = [
 
 const container = document.getElementById("products");
 
-// LOAD PRODUCTS
 if (container) {
+  let html = "";
+
   products.forEach(p => {
-    container.innerHTML += `
+    html += `
       <div class="card">
         <img src="${p.image}">
         <h3>${p.name}</h3>
@@ -90,9 +91,10 @@ if (container) {
       </div>
     `;
   });
+
+  container.innerHTML = html;
 }
 
-// NAVIGATION
 function goToProduct(id) {
-  window.location.href = `product.html?id=${id}`;
+  window.location.href = "product.html?id=" + id;
 }
