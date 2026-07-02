@@ -11,27 +11,28 @@ const container = document.getElementById("product-page");
 // SHOW PRODUCT
 if (product) {
   container.innerHTML = `
-    <div class="product-layout">
+  <div class="product-layout">
 
-      <div class="left">
-        <img src="${product.image}" class="main-img"/>
-      </div>
+    <!-- IMAGE -->
+    <img src="${product.image}" class="main-img"/>
 
-      <div class="right">
-        <h2>${product.name}</h2>
+    <!-- NAME -->
+    <h2>${product.name}</h2>
 
-        <p class="desc">
-          High quality product with best performance.
-          Order now and get fast delivery.
-        </p>
+    <!-- DESCRIPTION -->
+    <p class="desc">
+      High quality product with best performance.
+      Order now and get fast delivery.
+    </p>
 
-        <p class="price">KES ${Number(product.price).toLocaleString()}</p>
+    <!-- PRICE -->
+    <p class="price">KES ${Number(product.price).toLocaleString()}</p>
 
-        <div id="cart-controls"></div>
-      </div>
+    <!-- CART -->
+    <div id="cart-controls"></div>
 
-    </div>
-  `;
+  </div>
+`;
 
   renderCartControls();
 }
