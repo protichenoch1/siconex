@@ -13,7 +13,7 @@ products.forEach(product => {
     <p>$${product.price}</p>
 
     <button onclick="event.stopPropagation(); addToCart(${product.id})">
-      Add to Cart
+      View Product
     </button>
   </div>
   `;
