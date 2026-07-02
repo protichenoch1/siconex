@@ -8,13 +8,7 @@
 </head>
 <body>
 
-<!-- HEADER -->
-<header class="header">
-  <div class="nav-row">
-    <span class="logo">Siconex</span>
-    <span>🛒 <span id="cart-count">0</span></span>
-  </div>
-</header>
+  <div id="header-container"></div>
 
 <!-- PRODUCT PAGE -->
 <div class="product-page" id="product-page"></div>
@@ -25,6 +19,14 @@
 
 <script src="products.js"></script>
 <script src="product.js"></script>
+
+  <script>
+fetch("header.html")
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById("header-container").innerHTML = data;
+  });
+  </script>
 
 </body>
 </html>
