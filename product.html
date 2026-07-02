@@ -1,14 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Product Details</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product - Siconex</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <div id="product-details"></div>
+<!-- HEADER -->
+<header class="header">
+  <div class="nav-row">
+    <span class="logo">Siconex</span>
+    <span>🛒 <span id="cart-count">0</span></span>
+  </div>
+</header>
 
-  <script src="products.js"></script>
-  <script src="product.js"></script>
+<!-- PRODUCT PAGE -->
+<div class="product-page" id="product-page"></div>
+
+<!-- SUGGESTED -->
+<h2 class="section-title">Related Products</h2>
+<div class="products" id="related-products"></div>
+
+<script src="products.js"></script>
+<script src="product.js"></script>
+
 </body>
 </html>
