@@ -72,29 +72,3 @@ const products = [
     description: "High-capacity power bank for multiple device charging."
   }
 ];
-
-const container = document.getElementById("products");
-
-if (container) {
-  let html = "";
-
-  products.forEach(p => {
-    html += `
-      <div class="card">
-        <img src="${p.image}">
-        <h3>${p.name}</h3>
-        <p>KES ${Number(p.price).toLocaleString()}</p>
-
-        <button class="view-btn" onclick="goToProduct(${p.id})">
-          View Product
-        </button>
-      </div>
-    `;
-  });
-
-  container.innerHTML = html;
-}
-
-function goToProduct(id) {
-  window.location.href = "product.html?id=" + id;
-}
