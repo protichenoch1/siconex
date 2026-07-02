@@ -1,18 +1,17 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Product</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+const params = new URLSearchParams(window.location.search);
+const productId = params.get("id");
 
-<div class="product-page">
-  <img id="product-img">
-  <h2 id="product-name"></h2>
-  <p id="product-price"></p>
-  <button onclick="addToCart()">Add to Cart</button>
-</div>
+const product = products.find(p => p.id == productId);
 
-<script src="product.js"></script>
-</body>
-</html>
+const container = document.getElementById("product-details");
+
+if (product) {
+  container.innerHTML = `
+    <div class="product-page">
+      <img src="${product.image}" />
+      <h1>${product.name}</h1>
+      <p>$${product.price}</p>
+      <button onclick="addToCart(${product.id})">Add to Cart</button>
+    </div>
+  `;
+}
