@@ -18,7 +18,9 @@
 
     <div class="right">
       <span class="icon">👤</span>
-      <span class="icon">🛒</span>
+      <span class="icon">
+        🛒 <span id="cart-count">0</span>
+      </span>
     </div>
   </div>
 
@@ -52,34 +54,14 @@
     <img src="images/banner.jpg">
   </div>
 
-  <!-- PRODUCTS -->
-  <div class="products">
-    <div class="product">
-      <img src="images/galaxy06.jpg">
-      <p class="name">Samsung Galazy A06</p>
-      <p class="price">$120</p>
-    </div>
-
-    <div class="product">
-      <img src="images/hp820.jpg">
-      <p class="name">HP EliteBook 820</p>
-      <p class="price">$25</p>
-    </div>
-
-    <div class="product">
-      <img src="images/vitron32.jpg">
-      <p class="name">Vitron HTC3288QS</p>
-      <p class="price">KES 12,500</p>
-    </div>
-
-    <div class="product">
-      <img src="images/airmars1.jpg">
-      <p class="name">AirMars APB05</p>
-      <p class="price">$15</p>
-    </div>
-  </div>
+  <!-- PRODUCTS (NOW DYNAMIC) -->
+  <div class="products" id="product-list"></div>
 
 </div>
+
+<!-- SCRIPTS -->
+<script src="products.js"></script>
+<script src="app.js"></script>
 
 </body>
 </html>
