@@ -1,41 +1,36 @@
+// GET ELEMENTS
 const container = document.getElementById("product-list");
 const cartCount = document.getElementById("cart-count");
 
-// Load cart from storage
+// LOAD CART FROM STORAGE
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-// Display products
-products.forEach(product => {
-  container.innerHTML += `
-  <div class="card" onclick="goToProduct(${product.id})">
-    <img src="${product.image}" />
-    <h3>${product.name}</h3>
-    <p>$${product.price}</p>
+// =========================
+// DISPLAY PRODUCTS
+// =========================
+if (container) {
+  let html = "";
 
-    <button onclick="event.stopPropagation(); addToCart(${product.id})">
-      Add To Cart
-    </button>
-  </div>
-  `;
-});
+  products.forEach(product => {
+    html += `
+      <div class="card" onclick="goToProduct(${product.id})">
+        <img src="${product.image}" />
+        <h3>${product.name}</h3>
+        <p>KES ${Number(product.price).toLocaleString()}</p>
 
-// Add to cart
-function addToCart(id) {
-  const product = products.find(p => p.id === id);
+        <button class="view-btn" onclick="event.stopPropagation(); goToProduct(${product.id})">
+          View Product
+        </button>
+      </div>
+    `;
+  });
 
-  const existing = cart.find(item => item.id === id);
-
-  if (existing) {
-    existing.quantity += 1;
-  } else {
-    cart.push({ ...product, quantity: 1 });
-  }
-
-  localStorage.setItem("cart", JSON.stringify(cart));
-  updateCartCount();
+  container.innerHTML = html;
 }
 
-// Update cart count
+// =========================
+// UPDATE CART COUNT
+// =========================
 function updateCartCount() {
   let total = 0;
 
@@ -43,12 +38,16 @@ function updateCartCount() {
     total += item.quantity;
   });
 
-  cartCount.innerText = total;
+  if (cartCount) {
+    cartCount.innerText = total;
+  }
 }
 
-// Initialize count on load
 updateCartCount();
 
+// =========================
+// NAVIGATION
+// =========================
 function goToProduct(id) {
-  window.location.href = `product.html?id=${id}`;
+  window.location.href = "product.html?id=" + id;
 }
