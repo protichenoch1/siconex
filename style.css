@@ -302,3 +302,38 @@ body {
   font-weight: 600;
   cursor: pointer;
 }
+
+/* CART ITEM */
+.cart-item {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  background: #fff;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.cart-item img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+.cart-item .info {
+  flex: 1;
+}
+
+/* FOOTER */
+.cart-footer {
+  padding: 10px;
+}
+
+.checkout-btn {
+  width: 100%;
+  padding: 12px;
+  background: #16a34a;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  margin-top: 10px;
+}
