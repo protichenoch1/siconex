@@ -1,79 +1,74 @@
-const params = new URLSearchParams(window.location.search);
-const productId = params.get("id");
-
-let cart = JSON.parse(localStorage.getItem("cart")) || [];
-
-const product = products.find(p => p.id == productId);
-const container = document.getElementById("product-page");
-
-// SHOW PRODUCT
-if (product) {
-  container.innerHTML = `
-    <div class="product-layout">
-
-      <!-- LEFT: IMAGE -->
-      <div class="left">
-        <img src="${product.image}" class="main-img"/>
-      </div>
-
-      <!-- RIGHT: DETAILS -->
-      <div class="right">
-        <h2>${product.name}</h2>
-        <p class="price">$${product.price}</p>
-
-        <p class="desc">
-          High quality product with best performance. 
-          Order now and get fast delivery.
-        </p>
-
-        <button class="buy">Buy Now</button>
-        <button class="cart-btn" onclick="addToCart(${product.id})">
-          Add to Cart
-        </button>
-      </div>
-
-    </div>
-  `;
-}
-
-// ADD TO CART
-function addToCart(id) {
-  const item = products.find(p => p.id == id);
-  const existing = cart.find(p => p.id == id);
-
-  if (existing) {
-    existing.quantity += 1;
-  } else {
-    cart.push({ ...item, quantity: 1 });
+const products = [
+  {
+    id: 1,
+    name: "Samsung Galaxy A06",
+    price: 120,
+    category: "phones",
+    brand: "Samsung",
+    image: "images/galaxy06.jpg",
+    description: "Affordable Samsung smartphone with long battery life and smooth performance."
+  },
+  {
+    id: 2,
+    name: "HP EliteBook 820",
+    price: 250,
+    category: "laptops",
+    brand: "HP",
+    image: "images/hp820.jpg",
+    description: "Compact business laptop with solid performance and durability."
+  },
+  {
+    id: 3,
+    name: "Vitron HTC3288QS 32\" TV",
+    price: 12500,
+    category: "tvs",
+    brand: "Vitron",
+    image: "images/vitron32.jpg",
+    description: "32-inch HD TV with clear display and energy efficiency."
+  },
+  {
+    id: 4,
+    name: "AirMars APB05 Power Bank",
+    price: 15,
+    category: "power",
+    brand: "AirMars",
+    image: "images/airmars1.jpg",
+    description: "Reliable power bank for fast charging on the go."
+  },
+  {
+    id: 5,
+    name: "Tecno Spark 10",
+    price: 140,
+    category: "phones",
+    brand: "Tecno",
+    image: "images/tecno.jpg",
+    description: "Stylish smartphone with strong battery and good camera."
+  },
+  {
+    id: 6,
+    name: "Lenovo ThinkPad X1",
+    price: 600,
+    category: "laptops",
+    brand: "Lenovo",
+    image: "images/lenovo.jpg",
+    description: "Premium laptop with powerful performance and sleek design."
+  },
+  {
+    id: 7,
+    name: "Samsung 43\" Smart TV",
+    price: 300,
+    category: "tvs",
+    brand: "Samsung",
+    image: "images/samsungtv.jpg",
+    description: "Smart TV with streaming apps and high-quality display."
+  },
+  {
+    id: 8,
+    name: "Oraimo Power Bank 20000mAh",
+    price: 20,
+    category: "power",
+    brand: "Oraimo",
+    image: "images/oraimo.jpg",
+    description: "High-capacity power bank for multiple device charging."
   }
-
-  localStorage.setItem("cart", JSON.stringify(cart));
-  updateCart();
-}
-
-// UPDATE CART COUNT
-function updateCart() {
-  let total = 0;
-  cart.forEach(i => total += i.quantity);
-  document.getElementById("cart-count").innerText = total;
-}
-
-updateCart();
-
-
-// RELATED PRODUCTS
-const related = document.getElementById("related-products");
-
-products.slice(0,4).forEach(p => {
-  related.innerHTML += `
-    <div class="card" onclick="goToProduct(${p.id})">
-      <img src="${p.image}">
-      <p>${p.name}</p>
-      <p>$${p.price}</p>
-    </div>
-  `;
-});
-
-function goToProduct(id){
-  window.location.href = `product.html?id=${id}`;
-}
+];
