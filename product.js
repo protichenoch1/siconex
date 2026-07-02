@@ -19,7 +19,7 @@ if (product) {
       <!-- RIGHT: DETAILS -->
       <div class="right">
         <h2>${product.name}</h2>
-        <p class="price">$${product.price}</p>
+        <p class="price">KES ${product.price}</p>
 
         <p class="desc">
           High quality product with best performance. 
@@ -64,12 +64,17 @@ updateCart();
 // RELATED PRODUCTS
 const related = document.getElementById("related-products");
 
-products.slice(0,4).forEach(p => {
+// remove current product + limit to 4
+const filtered = products
+  .filter(p => p.id != Number(productId))
+  .slice(0, 4);
+
+filtered.forEach(p => {
   related.innerHTML += `
     <div class="card" onclick="goToProduct(${p.id})">
       <img src="${p.image}">
       <p>${p.name}</p>
-      <p>$${p.price}</p>
+      <p>KES ${Number(p.price).toLocaleString()}</p>
     </div>
   `;
 });
