@@ -290,3 +290,15 @@ body {
   font-weight: 600;
   background: #f0f0f0;
 }
+
+.view-btn {
+  margin-top: 5px;
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #16a34a;
+  background: #fff;
+  color: #16a34a;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+}
