@@ -259,28 +259,34 @@ body {
   }
   }
 
-/* QUANTITY CONTROL */
+/* FULL WIDTH QUANTITY CONTROL */
+#cart-controls {
+  width: 100%;
+}
+
 .qty-box {
   display: flex;
-  align-items: center;
-  gap: 10px;
+  width: 100%;
   margin-top: 10px;
+  border-radius: 6px;
+  overflow: hidden;
 }
 
 .qty-box button {
-  width: 35px;
-  height: 35px;
+  flex: 1;
+  height: 45px;
   border: none;
   background: #16a34a;
   color: white;
   font-size: 18px;
-  border-radius: 5px;
   cursor: pointer;
 }
 
 .qty-box span {
-  font-size: 16px;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-weight: 600;
-  min-width: 20px;
-  text-align: center;
+  background: #f0f0f0;
 }
